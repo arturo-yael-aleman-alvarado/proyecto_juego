@@ -11,33 +11,49 @@ public class Soldier extends Actor
     
     private int counterMove;
     private int currentImage;
-    private SoldierHud soldierHud;
+    private Soldier soldier;
+    private int directionShot=2;
+    private boolean shot=false;
     
-    public Soldier(SoldierHud soldierHud){
+    public Soldier(){
         images = new GreenfootImage[3];
         images[0] = new GreenfootImage("mov.png");
         images[1] = new GreenfootImage("mov2.png");
         images[2] = new GreenfootImage("mov1.png");
-        this.soldierHud = soldierHud;
     }
-    public void act()
-    {
+    public void act(){
         runSoldier();
         
         moveSoldier();
+        
+        setShot(directionShot);
+    }
+    public void setShot(int direction){
+        if(shot && Greenfoot.isKeyDown("x")){
+           Shoot s=new Shoot(direction);
+           getWorld().addObject(s,getX(),getY()); 
+           shot=false;
+        }   
+        if(!shot && !Greenfoot.isKeyDown("x")){
+            shot=true;
+        }
     }
     private void moveSoldier(){
         if(Greenfoot.isKeyDown("up")){
             setDirection(UP);
+            directionShot=2;
         }
         if(Greenfoot.isKeyDown("down")){
             setDirection(DOWN);
+            directionShot=2;
         }
         if(Greenfoot.isKeyDown("left")){
             setDirection(LEFT);
+            directionShot=2;
         }
         if(Greenfoot.isKeyDown("right")){
             setDirection(RIGHT);
+            directionShot=2;
         }
     }
     public void setDirection(int direction){

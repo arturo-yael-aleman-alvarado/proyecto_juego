@@ -17,5 +17,13 @@ public class Granate extends Actor
                 turn(Greenfoot.getRandomNumber(90-45));
             }
         }
+        
+        Actor Soldier=getOneObjectAtOffset(0,0,Soldier.class);
+        if(Soldier!=null){
+            MyWorld world=(MyWorld)getWorld();
+            getWorld().removeObject(Soldier);
+            world.objLife.Diminish();
+            getWorld().addObject(new Soldier(),50,300);
+        }
     }
 }
