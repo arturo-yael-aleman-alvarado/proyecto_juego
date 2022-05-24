@@ -4,9 +4,11 @@ public class MyWorld extends World
     public MyWorld()
     {    
         super(600, 400, 1); 
-        Soldier n1=new Soldier();
-        addObject(n1,50,300);
-        crearGranate(15);
+        SoldierHud hud = new SoldierHud();
+        addObject(hud,0,0);
+        Soldier soldier = new Soldier(hud);
+        addObject(soldier,50,300);
+        crearGranate(12);
     }
     public void crearGranate(int numero){
         for(int i=0;i<numero;i++){
