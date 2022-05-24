@@ -1,19 +1,29 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Granate here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import greenfoot.*; 
 public class Granate extends Actor
 {
-    /**
-     * Act - do whatever the Granate wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act()
     {
-        // Add your action code here.
+        move(2);
+        World n=getWorld();
+        if(getX()>=n.getWidth()-5||getX()<=5){
+            turn(180);
+            if(Greenfoot.getRandomNumber(100)<90){
+                turn(Greenfoot.getRandomNumber(90-45));
+            }
+        }
+        if(getY()>=n.getHeight()-5||getY()<=5){
+            turn(180);
+            if(Greenfoot.getRandomNumber(100)<90){
+                turn(Greenfoot.getRandomNumber(90-45));
+            }
+        }
+        
+        Actor Soldier=getOneObjectAtOffset(0,0,Soldier.class);
+        if(Soldier!=null){
+            MyWorld world=(MyWorld)getWorld();
+            getWorld().removeObject(Soldier);
+            world.objLife.Diminish();
+            getWorld().addObject(new Soldier(),50,300);
+        }
     }
 }
