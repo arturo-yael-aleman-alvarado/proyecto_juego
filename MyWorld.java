@@ -1,21 +1,29 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import greenfoot.*;  
+import java.util.*;
 public class MyWorld extends World
 {
-
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
+    public Lifes objLife;
+    Stats points;
+    Stats lifes;
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        setPaintOrder(GameOver.class,Stats.class,Granate.class,Soldier.class);        
+        Soldier soldier = new Soldier();
+        addObject(soldier,50,300);
+        crearGranate(8);
+        objLife=new Lifes();
+        points=new Stats(0,"Score: ");
+        lifes=new Stats(3,"Lifes: ");
+        addObject(points,150,85);
+        addObject(lifes,300,85);
+    }
+    public void crearGranate(int numero){
+        for(int i=0;i<numero;i++){
+            Granate r=new Granate();
+            int x=Greenfoot.getRandomNumber(getWidth());
+            int y=Greenfoot.getRandomNumber(getHeight());
+            addObject(r,x,y);
+        }
     }
 }
