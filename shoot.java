@@ -1,7 +1,6 @@
 import greenfoot.*; 
 public class Shoot extends Item
 {
-    private int shotImage=1;
     private int speedShoot=6;
     private int position;
     
@@ -23,6 +22,13 @@ public class Shoot extends Item
             case 3:
                 setLocation(getX()-speedShoot,getY());
             break;
+        }
+        
+        Actor Granate=getOneObjectAtOffset(0,0,Granate.class);
+        if(Granate!=null){
+            MyWorld world=(MyWorld)getWorld();
+            getWorld().removeObject(Granate);
+            world.points.increase();
         }
         if((getX()>=getWorld().getWidth()-5||(getX()<=5))){
             getWorld().removeObject(this);

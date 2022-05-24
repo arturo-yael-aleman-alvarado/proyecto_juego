@@ -1,5 +1,5 @@
 import greenfoot.*; 
-public class Granate extends Actor
+public class Granate extends Item
 {
     public void act()
     {
@@ -22,8 +22,13 @@ public class Granate extends Actor
         if(Soldier!=null){
             MyWorld world=(MyWorld)getWorld();
             getWorld().removeObject(Soldier);
-            world.objLife.Diminish();
+            world.lifes.decrease();
             getWorld().addObject(new Soldier(),50,300);
+            if(world.lifes.returnCont()==0){
+                GameOver gm=new GameOver();
+                getWorld().addObject(gm,((getWorld().getWidth()/2)+50),((getWorld().getHeight()/2)+150));
+            }
         }
     }
 }
+

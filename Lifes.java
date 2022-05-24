@@ -1,11 +1,14 @@
 import greenfoot.*;
-public class Lifes extends Medidores
+public class Lifes extends Visualizers
 {
-    private int lifes=3;
+    private int l=3;
+    public Lifes(){
+        
+    }
     public void Diminish()
     {
-        lifes--;
-        if(lifes==0){
+        l--;
+        if(l==0){
             Greenfoot.stop();
         }
     }
