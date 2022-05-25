@@ -29,7 +29,10 @@ public class Shoot extends Item
             MyWorld world=(MyWorld)getWorld();
             getWorld().removeObject(Granate);
             world.points.increase();
+            world.crearGranate(1);
+            getWorld().removeObject(this);
         }
+        else
         if((getX()>=getWorld().getWidth()-5||(getX()<=5))){
             getWorld().removeObject(this);
         }

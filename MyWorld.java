@@ -11,7 +11,7 @@ public class MyWorld extends World
         setPaintOrder(GameOver.class,Stats.class,Granate.class,Soldier.class);        
         Soldier soldier = new Soldier();
         addObject(soldier,50,300);
-        crearGranate(8);
+        crearGranate(10);
         objLife=new Lifes();
         points=new Stats(0,"Score: ");
         lifes=new Stats(3,"Lifes: ");
