@@ -20,7 +20,7 @@ public class Granate extends Item
         
         Actor Soldier=getOneObjectAtOffset(0,0,Soldier.class);
         if(Soldier!=null){
-            MyWorld world=(MyWorld)getWorld();
+            Level1 world=(Level1)getWorld();
             getWorld().removeObject(Soldier);
             world.lifes.decrease();
             getWorld().addObject(new Soldier(),50,300);

@@ -26,11 +26,10 @@ public class Shoot extends Item
         
         Actor Granate=getOneObjectAtOffset(0,0,Granate.class);
         if(Granate!=null){
-            MyWorld world=(MyWorld)getWorld();
-            getWorld().removeObject(Granate);
+            Level1 world=(Level1)getWorld();
             world.points.increase();
             world.crearGranate(1);
-            getWorld().removeObject(this);
+            getWorld().removeObject(Granate);
         }
         else
         if((getX()>=getWorld().getWidth()-5||(getX()<=5))){

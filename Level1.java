@@ -1,16 +1,18 @@
 import greenfoot.*;  
 import java.util.*;
-public class MyWorld extends World
+public class Level1 extends World
 {
     public Lifes objLife;
     Stats points;
     Stats lifes;
-    public MyWorld()
+    public Level1()
     {    
         super(600, 400, 1); 
         setPaintOrder(GameOver.class,Stats.class,Granate.class,Soldier.class);        
         Soldier soldier = new Soldier();
         addObject(soldier,50,300);
+        NPC npc = new NPC();
+        addObject(npc,570,60);
         crearGranate(10);
         objLife=new Lifes();
         points=new Stats(0,"Score: ");
