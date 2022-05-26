@@ -3,6 +3,9 @@ public class NPC extends Item
 {
     public void act()
     {
-        // Add your action code here.
+        Actor Soldier=getOneObjectAtOffset(0,0,Soldier.class);
+        if(Soldier!=null){
+            Greenfoot.setWorld(new History2());
+        }
     }
 }

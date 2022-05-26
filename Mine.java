@@ -1,19 +1,18 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Mine here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import greenfoot.*; 
 public class Mine extends Item
 {
-    /**
-     * Act - do whatever the Mine wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act()
     {
-        // Add your action code here.
+        Actor Soldier=getOneObjectAtOffset(0,0,Soldier.class);
+        if(Soldier!=null){
+            Level2 world=(Level2)getWorld();
+            getWorld().removeObject(Soldier);
+            world.lifes.decrease();
+            getWorld().addObject(new Soldier(),50,300);
+            if(world.lifes.returnCont()==0){
+                GameOver gm=new GameOver();
+                getWorld().addObject(gm,((getWorld().getWidth()/2)+50),((getWorld().getHeight()/2)+150));
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@ public class Stats extends Visualizers
         cont=c;
         message=msj;
         image=new GreenfootImage(250,150);
-        image.setColor(new Color(200,200,0,255));
+        image.setColor(new Color(255,200,0,255));
         image.setFont(new Font("Verdana",true,true,24));
         draw();
     }

@@ -13,7 +13,7 @@ public class Level1 extends World
         addObject(soldier,50,300);
         NPC npc = new NPC();
         addObject(npc,570,60);
-        crearGranate(10);
+        crearGranate(1);
         objLife=new Lifes();
         points=new Stats(0,"Score: ");
         lifes=new Stats(3,"Lifes: ");
