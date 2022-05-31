@@ -5,13 +5,13 @@ public class Mine extends Item
     {
         Actor Soldier=getOneObjectAtOffset(0,0,Soldier.class);
         if(Soldier!=null){
-            Level2 world=(Level2)getWorld();
+            Level2 level2=(Level2)getWorld();
             getWorld().removeObject(Soldier);
-            world.lifes.decrease();
+            level2.lifes.decrease();
             getWorld().addObject(new Soldier(),50,340);
-            if(world.lifes.returnCont()==0){
-                GameOver gm=new GameOver();
-                getWorld().addObject(gm,((getWorld().getWidth()/2)+50),((getWorld().getHeight()/2)+150));
+            if(level2.lifes.returnCont()==0){
+                GameOver gameover=new GameOver();
+                getWorld().addObject(gameover,((getWorld().getWidth()/2)+50),((getWorld().getHeight()/2)+150));
             }
         }
     }

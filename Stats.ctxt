@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Stats
-comment1.params=c\ msj
+comment1.params=c\ Message
 comment1.target=Stats(int,\ java.lang.String)
 comment2.params=
 comment2.target=void\ draw()

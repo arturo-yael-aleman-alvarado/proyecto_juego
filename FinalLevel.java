@@ -5,6 +5,7 @@ public class FinalLevel extends World
     Stats points;
     Stats lifes;
     StatsBoss lifeBoss;
+    
     public FinalLevel()
     {    
         super(600, 400, 1); 

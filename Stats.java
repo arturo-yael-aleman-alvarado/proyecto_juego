@@ -5,9 +5,9 @@ public class Stats extends Visualizers
     private GreenfootImage image;
     private int cont;
     private String message;
-    public Stats(int c, String msj){
+    public Stats(int c, String Message){
         cont=c;
-        message=msj;
+        Message=message;
         image=new GreenfootImage(250,150);
         image.setColor(new Color(255,200,0,255));
         image.setFont(new Font("Verdana",true,true,24));

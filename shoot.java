@@ -26,9 +26,9 @@ public class Shoot extends Item
         
         Actor Granate=getOneObjectAtOffset(0,0,Granate.class);
         if(Granate!=null){
-            Level1 world=(Level1)getWorld();
-            world.points.increase();
-            world.crearGranate(1);
+            Level1 level1=(Level1)getWorld();
+            level1.points.increase();
+            level1.crearGranate(1);
             getWorld().removeObject(Granate);
         }
         else
@@ -44,8 +44,8 @@ public class Shoot extends Item
         if(boss!=null){
             FinalLevel finalevel=(FinalLevel)getWorld();
             //finalevel.points.increase();
-            finalevel.lifesBoss.decrease();
-            if(finalevel.lifesBoss.returnCont()==0){
+            finalevel.lifeBoss.decrease();
+            if(finalevel.lifeBoss.returnCont()==0){
                 finalevel.removeObject(boss);
                 finalevel.lifes.increase();
                 finalevel.removeObject(finalevel.lifeBoss);

@@ -30,8 +30,8 @@ public class Soldier extends Actor
     }
     public void setShot(int direction){
         if(shot && Greenfoot.isKeyDown("x")){
-           Shoot s=new Shoot(direction);
-           getWorld().addObject(s,getX(),getY()); 
+           Shoot shoot=new Shoot(direction);
+           getWorld().addObject(shoot,getX(),getY()); 
            shot=false;
         }   
         if(!shot && !Greenfoot.isKeyDown("x")){

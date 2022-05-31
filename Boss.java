@@ -40,8 +40,8 @@ public class Boss extends Actor
             finalevel.addObject(new Soldier(),50,300);
             finalevel.lifes.decrease();
             if(finalevel.lifes.returnCont()==0){
-                GameOver gm=new GameOver();
-                getWorld().addObject(gm,((getWorld().getWidth()/2)+50),((getWorld().getHeight()/2)+150));
+                GameOver gameover=new GameOver();
+                getWorld().addObject(gameover,((getWorld().getWidth()/2)+50),((getWorld().getHeight()/2)+150));
             }
         }
     }
