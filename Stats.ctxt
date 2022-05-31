@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Stats
+comment1.params=c\ Message
+comment1.target=Stats(int,\ java.lang.String)
+comment2.params=
+comment2.target=void\ draw()
+comment3.params=
+comment3.target=void\ increase()
+comment4.params=
+comment4.target=void\ decrease()
+comment5.params=
+comment5.target=int\ returnCont()
+comment6.params=
+comment6.target=void\ act()
+numComments=7
