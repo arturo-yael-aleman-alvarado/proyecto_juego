@@ -16,7 +16,7 @@ public class Level1 extends World
         crearGranate(1);
         objLife=new Lifes();
         points=new Stats(0,"Score: ");
-        lifes=new Stats(3,"Lifes: ");
+        lifes=new Stats(5,"Lifes: ");
         addObject(points,150,85);
         addObject(lifes,300,85);
     }

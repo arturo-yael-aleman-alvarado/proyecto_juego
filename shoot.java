@@ -33,6 +33,27 @@ public class Shoot extends Item
         }
         else
         if((getX()>=getWorld().getWidth()-5||(getX()<=5))){
+            getWorld().removeObject(Granate);
+        }
+        else
+        if((getY()>=getWorld().getHeight()-5||(getY()<=5))){
+            getWorld().removeObject(Granate);
+        }
+        
+        Boss boss=(Boss)getOneIntersectingObject(Boss.class);
+        if(boss!=null){
+            FinalLevel finalevel=(FinalLevel)getWorld();
+            //finalevel.points.increase();
+            finalevel.lifesBoss.decrease();
+            if(finalevel.lifesBoss.returnCont()==0){
+                finalevel.removeObject(boss);
+                finalevel.lifes.increase();
+                finalevel.removeObject(finalevel.lifeBoss);
+                Greenfoot.setWorld(new Final());
+            }
+        }
+        else
+        if((getX()>=getWorld().getWidth()-5||(getX()<=5))){
             getWorld().removeObject(this);
         }
         else

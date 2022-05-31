@@ -12,6 +12,8 @@ public class Intro extends World
         getBackground().drawImage(new GreenfootImage("X - To Shoot", 28, new Color(255,255,255), null), 400, 140);
         getBackground().drawImage(new GreenfootImage("Press Enter To Start", 48, new Color(250,0,0), null), 120, 300);
         getBackground().drawImage(new GreenfootImage("MADE BY FOREIGN KEY", 15, new Color(255,255,255), null), 250, 380);
+        //Greenfoot.playSound("C:/Users/lenovo/OneDrive/Escritorio/Jueguito/TheLastManStanding/sounds/Sountrack.mp3");
+
     }
     public void act(){
         if(Greenfoot.isKeyDown("enter")){

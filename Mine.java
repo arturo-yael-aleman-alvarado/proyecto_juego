@@ -8,7 +8,7 @@ public class Mine extends Item
             Level2 world=(Level2)getWorld();
             getWorld().removeObject(Soldier);
             world.lifes.decrease();
-            getWorld().addObject(new Soldier(),50,300);
+            getWorld().addObject(new Soldier(),50,340);
             if(world.lifes.returnCont()==0){
                 GameOver gm=new GameOver();
                 getWorld().addObject(gm,((getWorld().getWidth()/2)+50),((getWorld().getHeight()/2)+150));
