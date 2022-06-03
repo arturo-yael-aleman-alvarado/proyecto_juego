@@ -14,6 +14,8 @@ public class Final extends World
         super(600, 400, 1); 
         prepare();
         getBackground().drawImage(new GreenfootImage("Your Win", 100, new Color(0,255,0), null), 150, 5);
+        getBackground().drawImage(new GreenfootImage("Go To Records -> ", 30, new Color(0,0,255), null), 20, 375);
+        getBackground().drawImage(new GreenfootImage("Press Enter", 30, new Color(0,0,255), null),220, 375);
         /*
         List<GameRecord> records = recordsManager.getRecords();
         
@@ -31,7 +33,11 @@ public class Final extends World
         }
         */
     }
-    
+    public void act(){
+        if(Greenfoot.isKeyDown("enter")){
+            Greenfoot.setWorld(new RecordsLevel());
+        }
+    }
     private void prepare()
     {
         noviaF noviaF = new noviaF();

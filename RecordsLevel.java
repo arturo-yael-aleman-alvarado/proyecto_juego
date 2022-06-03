@@ -11,7 +11,7 @@ public class RecordsLevel extends World
     public RecordsLevel()
     {    
         super(600, 400, 1); 
-        getBackground().drawImage(new GreenfootImage("Press Enter To Continue", 48, new Color(255,255,255), null), 90, 350);
+        getBackground().drawImage(new GreenfootImage("Thanks For Playing :)", 48, new Color(255,255,255), null), 90, 350);
         GameRecord gameRecord = new GameRecord(Greenfoot.ask("playerName"), value);
         RecordsManager recordsManager = new RecordsManager("score.txt", 10);
         recordsManager.save(gameRecord);
@@ -28,11 +28,6 @@ public class RecordsLevel extends World
             this.showText(record.getPlayerName(), 120, 100+i);
             
             i+=80;
-        }
-    }
-    public void act(){
-        if(Greenfoot.isKeyDown("enter")){
-            Greenfoot.setWorld(new History2());
         }
     }
 }
