@@ -1,4 +1,5 @@
 import greenfoot.*;  
+import java.util.*;
 public class FinalLevel extends World
 {
     public Lifes objLife;
@@ -22,7 +23,7 @@ public class FinalLevel extends World
     public void putBoss(){
         Boss boss=new Boss();
         addObject(boss,getWidth()-80,(getHeight()/2)+20);
-        StatsBoss statsboss=new StatsBoss(100,0,0,20);
-        addObject(statsboss,750,85);
+        lifeBoss=new StatsBoss(100,0,0,20);
+        addObject(lifeBoss,750,85);
     }
 }

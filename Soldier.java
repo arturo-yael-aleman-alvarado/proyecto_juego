@@ -36,7 +36,7 @@ public class Soldier extends Actor
         }   
         if(!shot && !Greenfoot.isKeyDown("x")){
             shot=true;
-         Greenfoot.playSound("C:/Users/lenovo/OneDrive/Escritorio/Jueguito/TheLastManStanding/sounds/shoot.mp3");
+            Greenfoot.playSound("sounds/shoot.mp3");
         }
     }
     private void moveSoldier(){

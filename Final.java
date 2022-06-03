@@ -1,11 +1,37 @@
 import greenfoot.*; 
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.*;
+
 public class Final extends World
 {
+    RecordsManager recordsManager = new RecordsManager("score.txt",10);
     public Final()
     {    
         super(600, 400, 1); 
         prepare();
         getBackground().drawImage(new GreenfootImage("Your Win", 100, new Color(0,255,0), null), 150, 5);
+        
+        
+        
+        List<GameRecord> records = recordsManager.getRecords();
+        
+        int i = 0;
+        for (GameRecord record: records)
+        {
+            Counter score = new Counter();
+            
+            score.setValue(record.getScore());
+            addObject(score, 450,100+i);
+            this.showText(record.getPlayerName(), 350, 100+i);
+            
+            i+=80;
+            
+        }
+    
     }
     
     private void prepare()

@@ -6,8 +6,12 @@ public class Stats extends Visualizers
     private int cont;
     private String message;
     public Stats(int c, String Message){
+        GameRecord gameRecord = new GameRecord(Greenfoot.ask("playerName"), cont);
+        RecordsManager recordsManager = new RecordsManager("score.txt", 10);
+        recordsManager.save(gameRecord);
+        
         cont=c;
-        Message=message;
+        message=Message;
         image=new GreenfootImage(250,150);
         image.setColor(new Color(255,200,0,255));
         image.setFont(new Font("Verdana",true,true,24));

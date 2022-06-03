@@ -25,22 +25,13 @@ public class Shoot extends Item
         }
         
         Actor Granate=getOneObjectAtOffset(0,0,Granate.class);
+        Boss boss=(Boss)getOneIntersectingObject(Boss.class);
         if(Granate!=null){
             Level1 level1=(Level1)getWorld();
             level1.points.increase();
             level1.crearGranate(1);
             getWorld().removeObject(Granate);
         }
-        else
-        if((getX()>=getWorld().getWidth()-5||(getX()<=5))){
-            getWorld().removeObject(Granate);
-        }
-        else
-        if((getY()>=getWorld().getHeight()-5||(getY()<=5))){
-            getWorld().removeObject(Granate);
-        }
-        
-        Boss boss=(Boss)getOneIntersectingObject(Boss.class);
         if(boss!=null){
             FinalLevel finalevel=(FinalLevel)getWorld();
             //finalevel.points.increase();
@@ -51,14 +42,16 @@ public class Shoot extends Item
                 finalevel.removeObject(finalevel.lifeBoss);
                 Greenfoot.setWorld(new Final());
             }
+            finalevel.removeObject(this);
         }
         else
         if((getX()>=getWorld().getWidth()-5||(getX()<=5))){
             getWorld().removeObject(this);
         }
-        else
+        else{
         if((getY()>=getWorld().getHeight()-5||(getY()<=5))){
             getWorld().removeObject(this);
+        }
         }
     }
 }

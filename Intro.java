@@ -5,6 +5,7 @@ public class Intro extends World
         super(600, 400, 1); 
         Soldier soldier = new Soldier();
         addObject(soldier,50,202);
+     
         getBackground().drawImage(new GreenfootImage("The Last Man Standing", 64, new Color(0,255,0), null), 30, 40);
         getBackground().drawImage(new GreenfootImage("       Up", 28, new Color(255,255,255), null), 350, 180);
         getBackground().drawImage(new GreenfootImage("Left  +  Right - To Move", 28, new Color(255,255,255), null), 350, 210);
@@ -18,6 +19,7 @@ public class Intro extends World
     public void act(){
         if(Greenfoot.isKeyDown("enter")){
             Greenfoot.setWorld(new History());
+            Greenfoot.playSound("sounds/Sountrack.mp3");
         }
     }
 }

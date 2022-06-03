@@ -8,7 +8,7 @@ public class History2 extends World
         addObject(npc4,90,80);
         NPC5 npc5 = new NPC5();
         addObject(npc5,400,304);
-        Greenfoot.playSound("C:/Users/lenovo/OneDrive/Escritorio/Jueguito/TheLastManStanding/sounds/history.mp3");
+Greenfoot.playSound("sounds/history.mp3");
         getBackground().drawImage(new GreenfootImage("Press Enter ", 24, new Color(250,0,0), null), 470, 300);
         getBackground().drawImage(new GreenfootImage("To Continue", 24, new Color(250,0,0), null), 470, 320);
         getBackground().drawImage(new GreenfootImage("Lo logramos, ese camino tenia una complejidad ", 24, new Color(0,0,250), null), 150, 30);
