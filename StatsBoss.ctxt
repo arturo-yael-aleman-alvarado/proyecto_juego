@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=StatsBoss
+comment1.params=c\ x\ y\ height
+comment1.target=StatsBoss(int,\ int,\ int,\ int)
+comment2.params=
+comment2.target=void\ draw()
+comment3.params=
+comment3.target=void\ increase()
+comment4.params=
+comment4.target=void\ decrease()
+comment5.params=
+comment5.target=int\ returnCont()
+comment6.params=
+comment6.target=void\ act()
+numComments=7
