@@ -14,9 +14,7 @@ public class Final extends World
         super(600, 400, 1); 
         prepare();
         getBackground().drawImage(new GreenfootImage("Your Win", 100, new Color(0,255,0), null), 150, 5);
-        
-        
-        
+        /*
         List<GameRecord> records = recordsManager.getRecords();
         
         int i = 0;
@@ -31,7 +29,7 @@ public class Final extends World
             i+=80;
             
         }
-    
+        */
     }
     
     private void prepare()

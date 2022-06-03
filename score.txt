@@ -1,10 +1,2 @@
-diego,0
-diego,0
-diego,0
-diego,0
-diego,0
-diego,0
-diego,0
-diego,0
-diego,0
-diego,0
+Aldo,11
+Diego,0

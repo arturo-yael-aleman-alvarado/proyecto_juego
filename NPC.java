@@ -5,7 +5,7 @@ public class NPC extends Item
     {
         Actor Soldier=getOneObjectAtOffset(0,0,Soldier.class);
         if(Soldier!=null){
-            Greenfoot.setWorld(new History2());
+            Greenfoot.setWorld(new RecordsLevel());
         }
     }
 }
