@@ -1,0 +1,6 @@
+Fran,19
+Aldo,11
+Aldo,8
+Aldo,7
+Diego,0
+Aldo,0
