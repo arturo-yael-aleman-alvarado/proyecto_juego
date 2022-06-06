@@ -4,7 +4,7 @@ public class History3 extends World
     public History3()
     {    
         super(600, 400, 1); 
-        Greenfoot.playSound("C:/Users/lenovo/OneDrive/Escritorio/Jueguito/TheLastManStanding/sounds/history.mp3");
+        //Greenfoot.playSound("C:/Users/lenovo/OneDrive/Escritorio/Jueguito/TheLastManStanding/sounds/history.mp3");
         getBackground().drawImage(new GreenfootImage("Press Enter ", 24, new Color(250,0,0), null), 20, 300);
         getBackground().drawImage(new GreenfootImage("To Continue", 24, new Color(250,0,0), null), 20, 320);
         getBackground().drawImage(new GreenfootImage("Oooh Nooo!!! ", 24, new Color(0,0,250), null), 150, 30);
