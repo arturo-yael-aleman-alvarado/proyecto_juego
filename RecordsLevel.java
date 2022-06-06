@@ -8,14 +8,23 @@ import java.util.*;
 public class RecordsLevel extends World
 {
     int value=Stats.acum;
+    int death=Shoot.win + Granate.lose1 + Boss.lose2 + Mine.lose3;
+
     public RecordsLevel()
     {    
         super(600, 400, 1); 
-        getBackground().drawImage(new GreenfootImage("Thanks For Playing :)", 48, new Color(255,255,255), null), 90, 350);
-        GameRecord gameRecord = new GameRecord(Greenfoot.ask("playerName"), value);
+        getBackground().drawImage(new GreenfootImage("Press R for Return Menu",35, new Color(250,0,0), null),50,350);
         RecordsManager recordsManager = new RecordsManager("score.txt", 10);
-        recordsManager.save(gameRecord);
         
+        if(death==1){
+            GameRecord gameRecord = new GameRecord(Greenfoot.ask("playerName"), value);
+            recordsManager.save(gameRecord);
+        }
+        Shoot.win=0;
+        Granate.lose1=0;
+        Boss.lose2=0;
+        Mine.lose3=0;
+                   
         List<GameRecord> records = recordsManager.getRecords();
         
         int i = 0;
@@ -28,6 +37,12 @@ public class RecordsLevel extends World
             this.showText(record.getPlayerName(), 120, 100+i);
             
             i+=80;
+        }
+    }
+    public void act(){
+        if(Greenfoot.isKeyDown("r")){
+            Greenfoot.setWorld(new Intro());
+            Stats.acum=0;
         }
     }
 }

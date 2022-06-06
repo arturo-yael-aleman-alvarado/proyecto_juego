@@ -1,6 +1,7 @@
 import greenfoot.*; 
 public class Granate extends Item
 {
+    public static int lose1=0;
     public void act()
     {
         move(2);
@@ -25,8 +26,10 @@ public class Granate extends Item
             level1.lifes.decrease();
             getWorld().addObject(new Soldier(),50,300);
             if(level1.lifes.returnCont()==0){
-                GameOver gameover=new GameOver();
-                getWorld().addObject(gameover,((getWorld().getWidth()/2)+50),((getWorld().getHeight()/2)+150));
+                lose1++;
+                Greenfoot.setWorld(new RecordsLevel());;
+                //GameOver gameover=new GameOver();
+                //getWorld().addObject(gameover,((getWorld().getWidth()/2)+50),((getWorld().getHeight()/2)+150));
             }
         }
     }

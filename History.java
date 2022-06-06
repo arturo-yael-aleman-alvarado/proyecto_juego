@@ -8,7 +8,7 @@ public class History extends World
         addObject(npc2,62,80);
         NPC3 npc3 = new NPC3();
         addObject(npc3,400,304);
-        Greenfoot.playSound("sounds/history.mp3");
+        //Greenfoot.playSound("sounds/history.mp3");
         getBackground().drawImage(new GreenfootImage("Press Enter ", 24, new Color(250,0,0), null), 470, 300);
         getBackground().drawImage(new GreenfootImage("To Continue", 24, new Color(250,0,0), null), 470, 320);
         getBackground().drawImage(new GreenfootImage("¡Cuidado soldado eres el ultimo de tu peloton! ", 24, new Color(0,0,250), null), 150, 30);

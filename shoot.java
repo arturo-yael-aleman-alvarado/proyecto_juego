@@ -3,7 +3,7 @@ public class Shoot extends Item
 {
     private int speedShoot=6;
     private int position;
-    
+    public static int win=0;
     public Shoot(int direction){
         position=direction;
     }
@@ -41,6 +41,7 @@ public class Shoot extends Item
                 finalevel.lifes.increase();
                 finalevel.removeObject(finalevel.lifeBoss);
                 Greenfoot.setWorld(new Final());
+                win++;
             }
             finalevel.removeObject(this);
         }
